@@ -35,4 +35,4 @@ My undergrad was at the [Beijing Normal University](https://www.bnu.edu.cn/), wh
 
 I’ve also worked on a few fun coding projects, which you can view via my [GitHub profile](https://github.com/imerlwx).
 
-When I’m not staring at a screen all day, you can always find me hiking in the mountain. # live in nature ✌️
+When I’m not staring at a screen all day, you can always find me hiking in the mountain. # live in nature ✌️🏞
