@@ -9,7 +9,7 @@ profile:
   image: DSC_7611.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>Center for Education Research (CERAS)</p>
+    <p>CERAS 448</p>
     <p>520 Galvez Mall</p>
     <p>Stanford, CA 94305</p>
 
