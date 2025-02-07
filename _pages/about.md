@@ -21,11 +21,15 @@ social: false  # includes social icons at the bottom of the page
 
 Hi there! 😃
 
-My name is Wengxi and I am a research assistant at the City University of Hong Kong, supervised by Prof. Can Liu. My research interests lie in human-AI interactions, human-centered design and collaborations that can augment human capabilities in daily life. From a high-level perspective, the main question in my mind: **How to design interfaces that can facilitate the communication of information between humans and AI?**
+My research investigates how humans and AI systems can work together effectively to enhance human capabilities. I study the design of interactive systems that support meaningful communication and collaboration between humans and AI. My work combines theoretical frameworks from human-computer interaction with technical innovations in natural language processing and information visualization. I am particularly interested in **understanding how human intelligence and AI capabilities can complement each other, and how human behavior shapes AI development.**
 
-Two aspects:
+Through my research, I examine how interaction patterns and user feedback can inform AI training processes and system adaptation. I aim to develop new interaction paradigms and computational methods that enable humans and AI to leverage their respective strengths. This includes studying how people make sense of AI outputs, how AI systems can learn from human behavior during interaction, and how to design interfaces that support fluid collaboration between humans and AI. My goal is to advance both the theoretical understanding of human-AI interaction and the technical approaches for building effective human-AI collaborative systems that can evolve based on human input.
+
+<!-- My research interests lie in human-AI interactions, human-centered design and collaborations that can augment human capabilities in daily life. From a high-level perspective, the main question in my mind: **How to design interfaces that can facilitate the communication of information between humans and AI?** -->
+
+<!-- Two aspects:
 + How to design information representations to make communication smoother between humans and AI
-+ What are the scenarios that AI is well suited for helping us do daily tasks
++ What are the scenarios that AI is well suited for helping us do daily tasks -->
 
 > I am actively seeking for summer internships in Human-Computer Interactions. If you'd like to get in touch, please don't hesitate to email me at **wengxili65 at gmail dot com**, or on [X](https://twitter.com/LiWengxi)/[LinkedIn](https://www.linkedin.com/in/wengxi-li/)!
 

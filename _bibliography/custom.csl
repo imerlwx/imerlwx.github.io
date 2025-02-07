@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<style xmlns="http://purl.org/net/xbiblio/csl" class="in-text" version="1.0">
+  <macro name="author">
+    <names variable="author">
+      <name and="text" initialize-with=". ">
+        <name-part name="family">
+          <if variable="author">
+            <choose>
+              <if test="contains(., 'Li, Wengxi')">
+                <text value="Li" font-weight="bold"/>
+              </if>
+              <else>
+                <text value="."/>
+              </else>
+            </choose>
+          </if>
+        </name-part>
+      </name>
+    </names>
+  </macro>
+</style>
