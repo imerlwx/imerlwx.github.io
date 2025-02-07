@@ -2,7 +2,7 @@
 # layout: cv
 layout: page
 # permalink: /cv/
-permalink: /assets/pdf/Wengxi_Li_CV.pdf
+permalink: /assets/pdf/CV.pdf
 title: CV
 nav: true
 newtab: true
