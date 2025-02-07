@@ -1,21 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<style xmlns="http://purl.org/net/xbiblio/csl" class="in-text" version="1.0">
+<style xmlns="http://purl.org/net/xbiblio/csl" class="in-text" version="1.0" demote-non-dropping-particle="sort-only">
+  <info>
+    <title>Custom</title>
+    <id>custom</id>
+    <updated>2024-02-07T00:00:00+00:00</updated>
+  </info>
+  
   <macro name="author">
     <names variable="author">
       <name and="text" initialize-with=". ">
-        <name-part name="family">
-          <if variable="author">
-            <choose>
-              <if test="contains(., 'Li, Wengxi')">
-                <text value="Li" font-weight="bold"/>
-              </if>
-              <else>
-                <text value="."/>
-              </else>
-            </choose>
-          </if>
-        </name-part>
+        <if match="any" variable="author">
+          <names variable="author">
+            <name>
+              <name-part name="family">
+                <choose>
+                  <if match="any" variable="author">
+                    <names variable="author">
+                      <name>
+                        <if match="contains" text="Li, Wengxi">
+                          <text font-weight="bold"/>
+                        </if>
+                      </name>
+                    </names>
+                  </if>
+                </choose>
+              </name-part>
+            </name>
+          </names>
+        </if>
       </name>
     </names>
   </macro>
+
+  <citation>
+    <layout>
+      <text macro="author"/>
+    </layout>
+  </citation>
+  
+  <bibliography>
+    <layout>
+      <text macro="author"/>
+    </layout>
+  </bibliography>
 </style>
