@@ -33,7 +33,13 @@
   <!-- Entry bib key -->
   <div id="{{entry.key}}" class="{% if site.enable_publication_thumbnails %}col-sm-8{% else %}col-sm-10{% endif %}">
     <!-- Title -->
-    <div class="title">{{entry.title}}</div>
+    <div class="title">
+      {{entry.title}}
+      {%- if entry.tag %}
+      {%- assign tag_conf = entry.tag | split: "'" | first | strip | downcase | replace: ' ', '-' -%}
+      <span class="publication-tag publication-tag-{{ tag_conf }}">{{ entry.tag }}</span>
+      {%- endif %}
+    </div>
     <!-- Author -->
     <div class="author">
       {% assign author_array_size = entry.author_array | size %}
@@ -47,10 +53,15 @@
       {%- assign author_is_self = false -%}
       {%- assign author_last_name = author.last | remove: "¶" | remove: "&" | remove: "*" | remove: "†" | remove: "^"
       -%}
-      {%- if site.scholar.last_name contains author_last_name -%}
-      {%- if site.scholar.first_name contains author.first -%}
+      {%- assign author_last_name_downcase = author_last_name | downcase -%}
+      {%- assign author_first_name_downcase = author.first | downcase -%}
+      {%- assign profile_last_name = site.last_name | split: ' (' | first | downcase -%}
+      {%- assign profile_first_name = site.first_name | downcase -%}
+      {%- if author_last_name_downcase == profile_last_name and (author_first_name_downcase contains profile_first_name
+      or profile_first_name contains author_first_name_downcase) -%}
       {%- assign author_is_self = true -%}
-      {%- endif -%}
+      {%- elsif site.scholar.last_name contains author_last_name and site.scholar.first_name contains author.first -%}
+      {%- assign author_is_self = true -%}
       {%- endif -%}
       {%- assign coauthor_url = nil -%}
       {%- if site.data.coauthors[author_last_name] -%}
@@ -67,7 +78,7 @@
       {%- if forloop.last and author_array_limit == author_array_size -%}and&nbsp;{%- endif -%}
       {%- endif -%}
       {%- if author_is_self -%}
-      <em>{{author.first}} {{author.last}}</em>
+      <span class="author-self">{{author.first}} {{author.last}}</span>
       {%- else -%}
       {%- if coauthor_url -%}
       <a href="{{coauthor_url}}">{{author.first}} {{author.last}}</a>
