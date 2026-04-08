@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-One full paper got accepted to AIED'25, see you in Palermo 🇮🇹
+One full paper got accepted to AIED'25, looking forward to Palermo 🇮🇹
