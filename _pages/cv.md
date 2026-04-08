@@ -2,7 +2,7 @@
 # layout: cv
 layout: page
 # permalink: /cv/
-permalink: /assets/pdf/CV.pdf
+permalink: /assets/pdf/CV_2026.pdf
 title: CV
 nav: true
 newtab: true
