@@ -1,7 +1,7 @@
 ---
 ---
 {% assign project = site.data.portfolio[entry.key] %}
-<article class="research-paper" id="paper-{{ entry.key }}">
+<article class="research-paper{% if entry.key == 'li2026orality' %} research-paper--orality{% endif %}" id="paper-{{ entry.key }}">
   <div class="paper-copy">
     <p class="paper-venue">{{ entry.tag | default: entry.year }} <span> / {{ project.theme | default: 'Research' }}</span></p>
     <h3><a href="{{ entry.pdf | prepend: '/assets/pdf/' | relative_url }}">{{ entry.title }}</a></h3>
