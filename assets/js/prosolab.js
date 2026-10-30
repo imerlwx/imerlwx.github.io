@@ -68,7 +68,7 @@
       utterance.removeAttribute('aria-hidden');
       speak.disabled = false;
       speak.setAttribute('aria-label', 'Simulate speech input in ProsoLab');
-      speak.title = 'Speak an example';
+      speak.title = 'Run the speech example';
       status.textContent = '';
       setStage('idle');
     });

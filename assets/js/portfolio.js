@@ -1,6 +1,11 @@
 (() => {
   'use strict';
 
+  document.querySelectorAll('.speech-hint').forEach((hint) => {
+    const button = hint.closest('button');
+    button.addEventListener('click', () => button.classList.add('has-spoken'), { once: true });
+  });
+
   // A scripted illustration, not a live AI system or microphone recording.
   const thoughts = [
     { node: 'A place to think', quote: '“I want a place to think out loud.”' },
