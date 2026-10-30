@@ -17,14 +17,14 @@ permissions:
 jobs:
   deploy:
     # available images: https://github.com/actions/runner-images#available-images
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
     - name: Checkout 🛎️
-      uses: actions/checkout@v3
+      uses: actions/checkout@v5
     - name: Setup Ruby
       uses: ruby/setup-ruby@v1
       with:
-        ruby-version: '3.2.2'
+        ruby-version: '3.2'
         bundler-cache: true
     - name: Update _config.yml ⚙️
       uses: fjogeleit/yaml-update-action@v0.13.1
@@ -35,7 +35,9 @@ jobs:
         value: ${{ github.repository }}
     - name: Install and Build 🔧
       run: |
-        pip3 install --upgrade jupyter
+        python3 -m venv "$RUNNER_TEMP/jekyll-python"
+        export PATH="$RUNNER_TEMP/jekyll-python/bin:$PATH"
+        python -m pip install --upgrade jupyter
         npm install -g mermaid.cli
         npm install -g purgecss
         export JEKYLL_ENV=production
