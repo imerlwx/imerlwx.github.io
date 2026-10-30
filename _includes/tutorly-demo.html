@@ -1,0 +1,25 @@
+<div class="tutor-chat" data-tutor-chat>
+  <button class="chat-replay" type="button" data-chat-replay aria-label="Restart learning example" title="Restart" hidden>↻</button>
+  <div class="chat-messages" aria-label="Guided programming practice">
+    <div class="chat-message chat-assistant">
+      <p>Complete the code to compare earnings across majors.</p>
+      <pre><code>ggplot(majors,
+  aes(Major_category, Median)) +
+  <span class="chat-code-blank" data-chat-blank>____</span>()</code></pre>
+    </div>
+    <div class="chat-choices chat-code-choices" role="group" aria-label="Choose the missing plotting function" data-chat-functions hidden>
+      <button type="button" data-chat-function="geom_point">geom_point</button>
+      <button type="button" data-chat-function="geom_boxplot">geom_boxplot</button>
+      <button type="button" data-chat-function="geom_line">geom_line</button>
+    </div>
+    <div class="chat-followup" data-chat-followup hidden>
+      <p class="chat-message chat-assistant">Exactly. What does this box plot help us compare?</p>
+      <div class="chat-choices" role="group" aria-label="What does a box plot help compare?" data-chat-answers>
+        <button type="button" data-chat-answer="trend">A trend over time</button>
+        <button type="button" data-chat-answer="spread">The median and spread</button>
+        <button type="button" data-chat-answer="individual">Individual observations</button>
+      </div>
+    </div>
+    <p class="chat-feedback" data-chat-feedback role="status" aria-live="polite"></p>
+  </div>
+</div>

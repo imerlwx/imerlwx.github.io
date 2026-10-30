@@ -1,0 +1,10 @@
+<div class="thought-demo" data-thought-demo>
+  <div class="thought-canvas" aria-label="An empty canvas waiting for a spoken thought" data-thought-canvas>
+    <svg class="thought-connectors" viewBox="0 0 420 180" preserveAspectRatio="none" aria-hidden="true"><path data-thought-connector="1" d="M210 83 C210 110 88 90 88 135" hidden/><path data-thought-connector="2" d="M210 83 C210 110 330 90 330 135" hidden/></svg>
+    <span class="thought-node node-main" data-node="0" hidden>A place to think</span>
+    <span class="thought-node node-left" data-node="1" hidden>Keep my own words</span>
+    <span class="thought-node node-right" data-node="2" hidden>Find a direction</span>
+  </div>
+  <button type="button" class="spoken-thought speech-input" data-thought-speak aria-label="Simulate the next spoken thought in Orality" title="Speak a thought" disabled><span class="waveform" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span><span data-utterance>“I want a place to think out loud.”</span><span class="speech-cue" aria-hidden="true">→</span></button>
+  <span class="visually-hidden" role="status" data-demo-step aria-live="polite">Speak a thought to add the first idea.</span>
+</div>

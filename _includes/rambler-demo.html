@@ -1,0 +1,15 @@
+<div class="ramble-demo" data-rambler-demo>
+  <div class="ramble-speech" data-ramble-speech hidden>
+    <button type="button" class="ramble-speak" data-ramble-speak aria-label="Simulate speech input"><span class="waveform" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span><span data-ramble-speak-label>Speak an idea</span></button>
+    <p class="ramble-utterance" data-ramble-utterance hidden></p>
+  </div>
+  <div class="ramble-ideas" data-ramble-ideas aria-label="Ideas dictated into Rambler">
+    <label class="ramble-card is-selected"><input type="checkbox" checked aria-label="Select first idea"><p>Walking helps me find <mark>ideas</mark> and talk them through before I worry about the <mark>wording</mark>.</p></label>
+  </div>
+  <div class="ramble-controls" hidden data-ramble-controls>
+    <button type="button" class="ramble-merge" data-ramble-merge disabled>Merge ideas <span aria-hidden="true">↗</span></button>
+    <div class="ramble-zoom"><span aria-hidden="true">Detail</span><input type="range" min="0" max="3" step="1" value="1" aria-label="Semantic zoom: detail to gist" aria-valuetext="Short summaries" data-ramble-zoom><span aria-hidden="true">Gist</span></div>
+    <button type="button" class="ramble-reset" data-ramble-reset aria-label="Restart writing example" title="Restart" hidden>↻</button>
+  </div>
+  <span class="visually-hidden" role="status" aria-live="polite" data-ramble-status></span>
+</div>

@@ -1,0 +1,19 @@
+li2026prosolab:
+  theme: Shape speech
+  description: A speech editor combining natural-language instructions, vocal demonstrations, and direct controls. A study of how people switch between methods to shape delivery and refine details.
+  caption: Three ways to edit speech, with proposed changes shown against the current version.
+li2026orality:
+  theme: Express & clarify
+  description: A semantic canvas that helps people turn spoken thoughts into ideas they can see, connect, and refine.
+li2025coggen:
+  hide_publisher: true
+  theme: Understand & guide
+  description: A learner-centered architecture for turning programming videos into personalized tutoring experiences.
+  caption: Bringing the learner’s needs into the tutoring loop.
+subramonyam2024bridging:
+  theme: Speak & create
+  description: A diary study of how people use speech and LLMs to write in everyday life.
+  tool_url: https://doi.org/10.1145/3613904.3642217
+li2024tutorly:
+  theme: Tutorly · Learn by doing
+  description: Turning programming videos into guided practice in JupyterLab, with mentoring moves that adapt to a learner’s developing skills.

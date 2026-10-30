@@ -1,8 +1,8 @@
 ---
-layout: about
+layout: portfolio
 title: about
 permalink: /
-subtitle: Second-year PhD Student @ CityUHK (HK PhD Fellowship Recipient)
+subtitle: 3rd year PhD candidate @ CityUHK (Hong Kong PhD Fellowship)
 
 profile:
   align: right

@@ -2,7 +2,7 @@
 # layout: cv
 layout: page
 # permalink: /cv/
-permalink: /assets/pdf/CV_2026.pdf
+permalink: /cv/
 title: CV
 nav: true
 newtab: true
@@ -12,3 +12,5 @@ nav_order: 3
 # toc:
 #   sidebar: left
 ---
+
+[Download my CV (PDF)]({{ "/assets/pdf/CV_2026.pdf" | relative_url }})

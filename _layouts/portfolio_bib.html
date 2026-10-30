@@ -1,0 +1,31 @@
+---
+---
+{% assign project = site.data.portfolio[entry.key] %}
+<article class="research-paper" id="paper-{{ entry.key }}">
+  <div class="paper-copy">
+    <p class="paper-venue">{{ entry.tag | default: entry.year }} <span> / {{ project.theme | default: 'Research' }}</span></p>
+    <h3><a href="{{ entry.pdf | prepend: '/assets/pdf/' | relative_url }}">{{ entry.title }}</a></h3>
+    <p class="paper-authors">{% for author in entry.author_array %}{% unless forloop.first %}, {% endunless %}{% if author.first contains 'Wengxi' %}<strong>{{ author.first }} {{ author.last }}</strong>{% else %}{{ author.first }} {{ author.last }}{% endif %}{% endfor %}</p>
+    {% if project.description %}<p class="paper-description">{{ project.description }}</p>{% endif %}
+    <div class="paper-links">
+      {% if entry.pdf %}<a href="{{ entry.pdf | prepend: '/assets/pdf/' | relative_url }}">Paper <span aria-hidden="true">↗</span></a>{% endif %}
+      {% if entry.video %}<a href="{{ entry.video }}">Video <span aria-hidden="true">↗</span></a>{% endif %}
+      {% if entry.doi and project.hide_publisher != true %}<a href="https://doi.org/{{ entry.doi }}">Publisher <span aria-hidden="true">↗</span></a>{% endif %}
+      {% if project.tool_url %}<a href="{{ project.tool_url }}">Original tool <span aria-hidden="true">↗</span></a>{% endif %}
+    </div>
+  </div>
+  <div class="paper-visual">
+    {% if entry.key == 'li2026prosolab' %}
+      {% include prosolab-demo.html %}
+    {% elsif entry.key == 'li2026orality' %}
+      {% include orality-demo.html %}
+    {% elsif entry.key == 'li2025coggen' %}
+      {% include tutorly-demo.html %}
+    {% elsif entry.key == 'subramonyam2024bridging' %}
+      {% include rambler-demo.html %}
+    {% else %}
+      <a class="research-image" href="{{ entry.pdf | prepend: '/assets/pdf/' | relative_url }}" aria-label="Read {{ entry.title | escape }}"><img src="{{ entry.preview | prepend: '/assets/img/publication_preview/' | relative_url }}" alt="{{ entry.title | escape }} — research figure" loading="lazy"></a>
+      {% if project.caption %}<p class="figure-caption">{{ project.caption }}</p>{% endif %}
+    {% endif %}
+  </div>
+</article>

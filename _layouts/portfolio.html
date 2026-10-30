@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="{{ site.lang | default: 'en' }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wengxi Li — Human–AI Interaction</title>
+  <meta name="description" content="Wengxi Li studies human–AI interaction, speech interfaces, and tools that help people express and clarify their intentions.">
+  <link rel="canonical" href="{{ '/' | absolute_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/portfolio.css' | relative_url }}">
+  <script src="{{ '/assets/js/portfolio.js' | relative_url }}" defer></script>
+  <script src="{{ '/assets/js/prosolab.js' | relative_url }}" defer></script>
+  <script src="{{ '/assets/js/rambler.js' | relative_url }}" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to research</a>
+  <div class="portfolio-shell">
+    <aside class="profile-panel" aria-label="About Wengxi">
+      <div class="identity">
+        <img class="portrait" src="{{ '/assets/img/DSC_7611.jpg' | relative_url }}" alt="Wengxi Li" width="76" height="90">
+        <div class="identity-text">
+          <a class="name" href="{{ '/' | relative_url }}">Wengxi Li</a>
+          <span class="chinese-name" lang="zh">李翁西</span>
+          <p class="role">Hong Kong PhD Fellowship</p>
+        </div>
+      </div>
+      <div class="profile-background">
+        <p>I’m a 3rd-year PhD candidate at the City University of Hong Kong supervised by <a href="https://sweb.cityu.edu.hk/canliu/index.html">Can Liu</a> and <a href="https://narechania.com/">Arpit Narechania</a> (HKUST).</p>
+        <p>Previously, I worked with <a href="https://haridecoded.com/">Hari Subramonyam</a> as a research assistant at Stanford’s Institute for Human-Centered Artificial Intelligence.</p>
+      </div>
+      <div class="profile-links">
+        <a href="{{ '/assets/pdf/CV_2026.pdf' | relative_url }}">CV <span aria-hidden="true">↗</span></a>
+        <a href="mailto:{{ site.email }}">Email <span aria-hidden="true">↗</span></a>
+        <a href="https://github.com/{{ site.github_username }}">GitHub <span aria-hidden="true">↗</span></a>
+        <a href="https://www.linkedin.com/in/{{ site.linkedin_username }}/">LinkedIn <span aria-hidden="true">↗</span></a>
+        <a href="https://twitter.com/{{ site.x_username }}">X <span aria-hidden="true">↗</span></a>
+      </div>
+      <small class="profile-copyright">© {{ site.time | date: '%Y' }} Wengxi Li</small>
+    </aside>
+
+    <main id="main">
+      <header class="research-intro" id="research">
+        <h1>From expression<br><span>to understanding.</span></h1>
+        <p>I study speech as more than text: the semantic structure of ideas, the expressive meaning of prosodic delivery, and the situated context of environment and interaction history. I build interfaces that bring these layers together to help people express what they mean and help AI understand their intent.</p>
+      </header>
+      <section class="research-list" aria-labelledby="research-heading">
+        <div class="section-heading publications-heading"><h2 id="research-heading">Publications</h2><p class="author-note">* Equal contribution</p></div>
+        {% bibliography -f {{ site.scholar.bibliography }} --group_by none --query @*[selected=true]* --template portfolio_bib %}
+      </section>
+      <footer class="main-footer"><p>Let’s think out loud.</p><a href="mailto:{{ site.email }}">Get in touch <span aria-hidden="true">↗</span></a></footer>
+    </main>
+  </div>
+</body>
+</html>
